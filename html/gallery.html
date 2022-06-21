@@ -1,0 +1,159 @@
+<section class="gallery">
+    <div class="container-gallery">
+        <div class="tab-gallery">
+            <ul class="bars">
+                <li class="bar-link current" data-tab="baking" onclick="fetchData(this)">BAKING</li>
+                <li class="bar-link" data-tab="breakfast" onclick="fetchData(this)">BREAKFAST</li>
+                <li class="bar-link" data-tab="sweets" onclick="fetchData(this)">SWEETS</li>
+                <li class="bar-link" data-tab="wheat" onclick="fetchData(this)">WHEAT</li>
+            </ul>
+            <div class="bar-contents">
+                <div id="bar-data">
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-1.jpg"
+                                alt="">
+                        </div>
+                        <h3>Baking Tools</h3>
+                        <p>Baking</p>
+                    </div>
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-2.jpg"
+                                alt="">
+                        </div>
+                        <h3>Stone-Ground Flour</h3>
+                        <p>Baking</p>
+                    </div>
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-4.jpg"
+                                alt="">
+                        </div>
+                        <h3>Art of Baking</h3>
+                        <p>Baking / Wheat</p>
+                    </div>
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-7.jpg"
+                                alt="">
+                        </div>
+                        <h3>Toasted Almonds</h3>
+                        <p>Baking / sweets</p>
+                    </div>
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-9.jpg"
+                                alt="">
+                        </div>
+                        <h3>Bread Variety</h3>
+                        <p>Baking / Wheat</p>
+                    </div>
+                    <div class="bar-content">
+                        <div class="image">
+                            <img src="https://baker.qodeinteractive.com/wp-content/uploads/2016/12/port-img-12.jpg"
+                                alt="">
+                        </div>
+                        <h3>Wheat Toast</h3>
+                        <p>Baking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01"
+                    src="" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    $(function () {
+        $(".bars li").on('click', function () {
+
+            var bar = $(this).attr('data-tab');
+
+            $('.bars li').removeClass('current');
+            $('.bar-pane').removeClass('current');
+
+            $(this).addClass('current');
+            $('#' + bar).addClass('current');
+        })
+    });
+
+    showModel()                    //สำหรับหน้าแรก โชว์ Defult
+    closeModel()
+
+    function fetchData(d) {                                    //fetchData(d) d = (this) in onclick
+        let attri = d.getAttribute("data-tab");               //ประกาศตัวแปลเก็บค่า Attribute จากการคลิก
+        const content = document.getElementById("bar-data");
+        document.getElementById("bar-data").innerHTML = "";  //การ cleaning ลบ element ใน tag Div#bar-data
+
+        fetch('../js/main.json')
+            .then(function (response) {
+                return response.json();     //รับข้อมูลมาและเแปลงเป็น Json
+            })
+            .then(function (data) {
+                console.log(data);         //นำข้อมูลที่ได้มาเก็บไว้ในตัวแปร data
+
+                if (attri == 'baking') {           //if check Attribute เพื่อเรียกชุดข้อมูลตามหมวดหมู่
+                    authors = data.baking;
+                } else if (attri == 'breakfast') {
+                    authors = data.breakfast;
+                } else if (attri == 'sweets') {
+                    authors = data.sweets;
+                } else if (attri == 'wheat') {
+                    authors = data.wheat;
+                }
+
+                console.log(authors);
+
+                return authors.map(function (author) {  //นำชุดข้อมูลที่ได้มา วนลูป Array ที่ละตัว เพื่อแสดงผลเป็นชุดๆ
+                    let div = createNode("div");         //การสร้าง Element
+                    div.className = "bar-content";      //การเพิ่ม Class in Tag <div>
+                    let divImg = createNode("div");
+                    divImg.className = "image";
+                    let img = createNode("img");
+                    let h3 = createNode("h3");
+                    let p = createNode("p");
+
+                    img.src = author.url;               //การดึง url จาก Json flie มาใส่ไว้ใน Attribute src in Tag <img>
+                    h3.innerHTML = `${author.name} ${author.lastName}`;
+                    p.innerHTML = `${author.lastName}`;   //การดึง lastName จาก Json flie มาแสดงใน Tag <p>
+
+                    append(divImg, img);
+                    append(div, divImg);                  //การผนวก Tag เข้าด้วยกัน  append(tag แม่, tag ลูก)
+                    append(div, h3);
+                    append(div, p);
+                    append(content, div)
+                    showModel()
+                    closeModel()
+                })
+            })
+            .catch(function (err) {
+                console.log("error :" + err);
+            });
+    }
+    function createNode(element) {                       //ฟังก์ชันการสร้าง Tag <element>
+        return document.createElement(element);
+    }
+    function append(parent, el) {                        //ฟังก์ชันการผนวก Tag เข้าด้วยกัน
+        return parent.appendChild(el);
+    }
+    function showModel() {                               //ฟังก์ชันโชว์ภาพ
+        document.querySelectorAll('img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.modal').style.display = 'block';
+                document.querySelector('.modal img').src = image.getAttribute("src");
+            }
+        });
+    }
+    function closeModel() {                              //ฟังก์ชันปิดภาพ
+        document.querySelector('.modal span').onclick = () => {
+            document.querySelector('.modal').style.display = 'none';
+        }
+    }
+
+</script>

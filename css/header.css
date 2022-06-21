@@ -1,0 +1,190 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+}
+.bg::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-size: cover;
+    background-position: bottom;
+    filter: brightness(55%);
+}
+.bg.bg-about::after {
+    height: 40%;
+    background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-attachment: fixed;
+}
+.bg.bg-menu::after {
+    height: 40%;
+    background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-attachment: fixed;
+}
+.bg.bg-contact::after {
+    height: 40%;
+    background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-attachment: fixed;
+}
+.bg.bg-gallery::after {
+    height: 40%;
+    background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-attachment: fixed;
+}
+
+/*------------------------------------ header-menu -------------------------------------*/
+
+.bg-text {
+    background-color: none;
+    color: white;
+    letter-spacing: .3em;
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 30%;
+    padding: 50px;
+    text-align: center;
+    font-size: calc(40% + 0.8vmin);
+}
+
+/*------------------------------------ header-page -------------------------------------*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 0px 60px;
+    z-index: 900;
+}
+.menu a:hover {
+    color: #eacc55;
+    border-bottom: 1px solid #e1be64;
+    transition: 0.3s;
+}
+
+.menu a.current {
+    color: #e1be64;
+    border-bottom: 1px solid #e1be64;
+}
+/*------------------------------------------------------------------------------------------*/
+.sticky {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease-in-out;
+}
+
+/*------------------------------------สำหรับเพิ่ม sticky ใน js---------------------------------------*/
+.logo {
+    font-size: 4.5rem;
+}
+.menu ul {
+    display: flex;
+}
+.menu a {
+    padding: 20px;
+    font-weight: bold;
+}
+.menu li {
+    list-style: none;
+}
+
+.icon button {
+    border: 0;
+    border-radius: 50%;
+    background-color: #ffff;
+    color: #232323;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon button:hover {
+    background-color: #e1be64;
+    color: #FFFF;
+    box-shadow: 1px 1px 10px #e1be64;
+    transition: 0.5s;
+}
+input[type=search] {
+    width: 0px;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+    background-color: #fff;
+    background-image: url('../img/search.png');
+    background-position: 12px 12px;
+    background-repeat: no-repeat;
+    padding: 0px 20px;
+    transition: 0.3s;
+    position: absolute;
+    right: 110px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type=search]:hover {
+    background-color: #e1be64;
+    box-shadow: 1px 1px 10px #e1be64;
+    transition: 0.5s;
+}
+input[type=search]:focus {
+    width: 10%;
+    border-radius: 10px;
+    background-image: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.sidenav{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: #181818;
+    overflow: auto;
+    transition: 0.5s;
+    text-align: center;
+    padding: 50px auto;
+}
+
+.sidenav a {
+    padding: 45px 8px 0px 32px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+}
+
+.sidenav a:hover{
+    color: #e1be64;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    margin-left: 50px;
+    border: 0;
+    color: #818181;
+}
+
+/*--------------------------------------ส่วนของ Navbar-------------------------------------*/

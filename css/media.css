@@ -1,0 +1,274 @@
+@media only screen and (max-width: 1400px) {
+    .search-input {
+        display: none;
+    }
+    section .container-content {
+        grid-template-columns: 0fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20px;
+    }
+    .container-content .content-text {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .container-content .content-img {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-content: center;
+    }
+    .container-content .content-text2 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .container-content .content-img2 {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-content: center;
+    }
+    .container-content .content-img2 img{
+        height: 220px;
+    }
+    /*--------------------------------------ส่วนของ Home-------------------------------------*/
+    
+    .container-about2-1 .content-about2-1{
+        display: none;
+    }
+    .content-about2-2 iframe {
+        width: 1000%;
+        margin: 0 auto;
+    }
+    /*--------------------------------------ส่วนของ About-------------------------------------*/
+
+    .container-contact1{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .content-contact2-1 {
+        width: 60%;
+    }
+    /*--------------------------------------ส่วนของ Contact-------------------------------------*/
+
+    .container-menu1 .menu-content {
+        width: 80%;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    .container-menu2 .menu-content2-1 {
+        width: 60%;
+    }
+    .menu .container-menu3 {
+        width: 80%;
+    }
+    .tab-pane .pane-content {
+        display: block;
+    }
+    .menu .container-menu4{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    /*--------------------------------------ส่วนของ Menu-------------------------------------*/
+
+    footer .container-footer {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-row-gap: 50px;
+    }
+    /*--------------------------------------ส่วนของ Footer-------------------------------------*/
+}
+
+@media only screen and (max-width: 840px) {
+    .container .nav {
+        padding: 0px 40px;
+    }
+    .nav .menu {
+        display: none;
+    }
+    .nav .logo {
+        font-size: 4.5rem;
+    }
+    .container .bg-text {
+        width: 50%;
+    }
+    /*--------------------------------------ส่วนของ Nav-------------------------------------*/
+    section .container-content {
+        width: 100%;
+    }
+    .container-content .content-img img {
+        padding-right: 10px;
+    }
+    section .container-content2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .container-content2 .img3 {
+        display: none;
+    }
+    .text-content4 .btn-content4 {
+        width: 20%;
+    }
+    /*--------------------------------------ส่วนของ Home-------------------------------------*/
+    .menu {
+        justify-content: center;
+    }
+    .menu .container-menu1 {
+        width: 90%;
+        margin: 30px 10px;
+    }
+    .menu .container-menu1 h1 {
+        font-size: 20px;
+    }
+    .menu .container-menu2 {
+        width: 100%;
+    }
+    .container-menu2 .menu-content2-1{
+        margin: 5rem auto;
+    }
+    .menu .container-menu3 {
+        width: 100%;
+    }
+    .container-menu3 .tab-example {
+        display: inline-block;
+    }
+    .container-menu3 .tab-example .tabs {
+        width: 100%;
+        display: inline-flex;
+        border-bottom: 1px solid rgb(230, 233, 238);
+        justify-content: center;
+    }
+    .tab-example .tabs li {
+        padding: 10px;
+    }
+    .tab-example .tabs li.current {
+        border-right: 0px solid #e1be64;
+        border-bottom: 1px solid #e1be64;
+    }
+    .tab-example .tab-contents {
+        padding: 0px;
+    }
+    .tab-contents .tab-pane{
+        text-align: center;
+        padding-top: 4rem;
+    }
+    .tab-contents .tab-pane h3{
+        font-size: 20px;
+    }
+    .menu .container-menu4{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    /*--------------------------------------ส่วนของ Menu-------------------------------------*/
+    .about .container-about1 {
+        width: 80%;
+        margin: 50px auto;
+    }
+    .container-about1 .content-about1 {
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto;
+        grid-row-gap: 20px;
+    }
+    .text-about1 h1{
+        font-size: 25px;
+    }
+    .container-about1 .content-about2{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-row-gap: 20px;
+    }
+    .img-about2{
+        padding: 0 5px;
+    }
+    .container-about2 .container-about2-1{
+        width: 90%;
+    }
+    .container-about2-1 .content-about2-1{
+        display: block;
+        margin: 0 auto;
+    }
+    .container-about2-1 .content-about2-2{
+        display: none;
+    }
+    /*--------------------------------------ส่วนของ About-------------------------------------*/
+
+    .container-contact1 {
+        grid-row-gap: 50px;
+        margin: 0 auto;
+    }
+    .content-contact2-2 .contact-img2-1{
+        margin: 0px 10px;
+    }
+    .content-contact2-2 .contact-img2-1 h6 {
+        font-size: 0.7rem;
+    }
+    /*--------------------------------------ส่วนของ Contact-------------------------------------*/
+    footer .container-footer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-row-gap: 50px;
+    }
+    /*--------------------------------------ส่วนของ Footer-------------------------------------*/
+}
+
+@media only screen and (max-width: 420px) {
+    .container-content .content-img {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .container-content .content-img img {
+        width: 100%;
+        padding-right: 0px;
+        margin: 10px auto;
+    }
+    section .container-content2 {
+        grid-template-columns: 1fr;
+    }
+    .container-content2 .img2 {
+        display: none;
+    }
+    /*--------------------------------------ส่วนของ Home-------------------------------------*/
+    .menu .container-menu1 {
+        width: 80%;
+        margin: 30px auto;
+    }
+    .container-menu2 .menu-content2-1 {
+        width: 60%;
+    }
+    .menu .container-menu3 {
+        width: 90%;
+    }
+    .tab-example {
+        width: 100%;
+    }
+    .tab-example .tabs li {
+        padding: 4px;
+    }
+    .tab-pane .pane-content {
+        display: block;
+    }
+    .menu .container-menu4{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .menu .container-menu2 {
+        width: 94%;
+    }
+    .menu-content4 {
+        width: 95%;
+    }
+    .menu .container-menu4{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    /*--------------------------------------ส่วนของ Menu-------------------------------------*/
+    .tab-gallery .bars li{
+        padding: 25px 10px;
+    }
+    .gallery .container-gallery {
+        width: 100%;
+    }
+    .container-gallery .tab-gallery .bar-contents {
+        width: 100%;
+    }
+    /*--------------------------------------ส่วนของ Gallery-------------------------------------*/
+}

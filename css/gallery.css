@@ -1,0 +1,120 @@
+section.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+}
+
+.container-gallery {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.tab-gallery .bars{
+    display: flex;
+    height: auto;
+    background: none;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid #e6e9ee;
+}
+
+.bars li{
+    line-height: 25px;
+    padding: 25px 30px;
+    color: #8d8d8d;
+    font-size: 15px;
+    font-weight: bold;
+}
+.bars li:hover{
+    color: #e1be64;
+    transition: 0.5s;
+}
+
+.bars li.current {
+    color: #e1be64;
+    border-bottom: 1px solid #e1be64;
+}
+
+.bar-contents {
+    width: 90%;
+    padding: 70px 0px;
+    margin: 0 auto;
+}
+
+#bar-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 30px;
+    margin: 15px auto;
+}
+
+.bar-content h3{
+    font-size: 16px;
+    line-height: 2em;
+    /* letter-spacing: .1em; */
+    margin: auto;
+    color: #333;
+}
+.bar-content p{
+    font-size: small;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+    color: #8d8d8d;
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.image img:hover{
+    transform: scale(1.1);
+    filter: brightness(65%);
+    transition: 0.5s ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 250px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border: 0.5rem solid #fff;
+}
+
+.close {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+}

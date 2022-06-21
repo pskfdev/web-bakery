@@ -1,0 +1,122 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px;
+    left: 0;
+    bottom: 0;
+    z-index: 888;
+}
+
+/*--------------------------------------การกำหนด grid layout ของ footer-------------------------------------*/
+.container-footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    background-color: #232323;
+    padding: 50px;
+    grid-column-gap: 100px;
+    margin: 0 auto;
+}
+
+.container-footer p {
+    font-size: 13px;
+}
+
+/*--------------------------------------ส่วนของ container Footer1-------------------------------------*/
+.footer-content1 a {
+    font-size: 4rem;
+}
+
+.footer-content1 p {
+    color: #BEBEBE;
+}
+
+.footer-contact {
+    display: flex;
+}
+
+.footer-contact a {
+    font-size: 1rem;
+    padding: 0px 4px;
+}
+
+/*--------------------------------------ส่วนของ Footer1-------------------------------------*/
+.footer-content2 p {
+    color: #BEBEBE;
+}
+
+.footer-head {
+    margin-bottom: 30px;
+}
+
+.footer-head p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #BEBEBE;
+    letter-spacing: 3px;
+}
+
+.footer-con2 {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-con2 a {
+    margin-right: 10px;
+    color: #e1be64;
+}
+
+/*--------------------------------------ส่วนของ Footer2-------------------------------------*/
+
+.footer-content3 .footer-content-img {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+}
+
+.footer-content-img {
+    width: 70%;
+}
+
+.footer-content-img img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/*--------------------------------------ส่วนของ Footer3-------------------------------------*/
+.footer-content4 .footer-con4 p {
+    color: #BEBEBE;
+}
+
+.footer-content4 .inputBtn input {
+    width: 70%;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+}
+.inputBtn{
+    z-index: 999;
+}
+.inputBtn button {
+    left: 0px;
+    border: none;
+    width: 20%;
+    height: 30px;
+    cursor: pointer;
+    background-color: #e1be64;
+    color: #ffffff;
+    font-size: calc(30% + 0.8vmin);
+}
+
+/*--------------------------------------ส่วนของ Footer4-------------------------------------*/
+.container-footer2 {
+    background-color: #181818;
+    color: #4F4F4F;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*--------------------------------------ส่วนของ container Footer2-------------------------------------*/

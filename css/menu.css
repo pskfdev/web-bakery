@@ -1,0 +1,205 @@
+section.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+}
+
+.container-menu1 {
+    width: 70%;
+    height: auto;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.container-menu1 h1 {
+    text-align: center;
+    font-weight: 600px;
+    letter-spacing: 4px;
+    font-size: 35px;
+    color: #333;
+}
+
+.container-menu1 p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300px;
+    font-size: calc(60% + 0.8vmin);
+    line-height: 26px;
+    color: #666;
+}
+
+.menu-content {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+}
+/*--------------------------------------ส่วนของ Content1-------------------------------------*/
+.container-menu2 {
+    width: 100%;
+    height: auto;
+    background-image: url("https://baker.qodeinteractive.com/wp-content/uploads/2017/03/pages-background-img-2.jpg?id=10273");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.menu-content2-1 {
+    width: 30%;
+    height: 75%;
+    background-color: #fff;
+    text-align: center;
+    margin: 5rem auto;
+    padding-top: 3rem;
+}
+
+.menu-content2-1 h3 {
+    font-weight: 600px;
+    font-size: 30px;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+    color: #333;
+}
+
+.menu-content2-1 p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #666;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/*--------------------------------------ส่วนของ Content2-------------------------------------*/
+
+.container-menu3 {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 128px 0px;
+}
+
+.tab-example {
+    display: flex;
+}
+
+.tab-example .tabs{
+    display: block;
+    height: auto;
+    background: none;
+    cursor: pointer;
+    list-style: none;
+    width: 20%;
+    border-right: 1px solid #e6e9ee;
+}
+
+.tabs li{
+    line-height: 25px;
+    padding: 25px 30px;
+    color: #8d8d8d;
+    font-size: 15px;
+    font-weight: bold;
+}
+.tabs li:hover{
+    color: #e1be64;
+    transition: 0.5s;
+}
+
+.tabs li.current {
+    color: #e1be64;
+    border-right: 2px solid #e1be64;
+}
+
+.tab-contents {
+    width: 100%;
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+    padding: 10px 90px;
+}
+.tab-pane h3{
+    font-weight: 600px;
+    font-size: 30px;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+    color: #333;
+}
+
+.tab-pane.current {
+    display: block;
+}
+
+.pane-content {
+    display: flex;
+    align-items: center;
+    color: #8d8d8d;
+}
+/*--------------------------------------ส่วนของ Content3-------------------------------------*/
+
+.container-menu4{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.menu-content4 {
+    width: 100%;
+    height: 55vh;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.bg1{
+    background-image: url("https://baker.qodeinteractive.com/wp-content/uploads/2017/03/pages-int-banner-img-4a.jpg");
+    background-size: cover;
+}
+.bg2{
+    background-image: url("https://baker.qodeinteractive.com/wp-content/uploads/2017/03/pages-int-banner-img-3a.jpg");
+    background-size: cover;
+}
+.bg3{
+    background-image: url("https://baker.qodeinteractive.com/wp-content/uploads/2017/03/pages-int-banner-img-2a.jpg");
+    background-size: cover;
+}
+.bg4{
+    background-image: url("https://baker.qodeinteractive.com/wp-content/uploads/2017/03/pages-int-banner-img-1a.jpg");
+    background-size: cover;
+}
+
+.menu-content4-text{
+    width: 70%;
+    padding-top: 50%;
+    margin: 0 auto;
+    color: #fff;
+    display: none;
+}
+.menu-content4-text h3{
+    font-weight: 600px;
+    font-size: 30px;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+}
+
+.btn-menu1 {
+    width: 40%;
+    padding: 15px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background-color: Transparent;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+.btn-menu1:hover{
+    border: 1px solid #e1be64;
+    background-color: #e1be64;
+    transition: 0.5s ease-in-out;
+}
